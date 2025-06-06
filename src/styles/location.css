@@ -1,0 +1,53 @@
+/*location.css */
+.location-container {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.location-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.map-info {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+.map {
+  height: 370px;
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.location-text {
+  max-width: 350px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.close-button {
+  position: absolute;
+  right: 30px;
+  margin-top: 5rem;
+  padding: 8px 16px;
+  font-size: 18px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: blox;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.close-button:hover {
+  background-color: darkred;
+}

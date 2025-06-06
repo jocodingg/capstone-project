@@ -1,0 +1,131 @@
+/* Styling untuk dashboard */
+.dashboard-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+/* Styling untuk tabel */
+.dashboard-table {
+  width: 100%; /* Memastikan tabel mengisi 100% lebar kontainer */
+  border-collapse: collapse; /* Menghilangkan border antar sel tabel */
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk tabel */
+  table-layout: auto; /* Mengatur lebar kolom tabel agar otomatis menyesuaikan */
+  overflow-x: auto; /* Mengaktifkan scroll horizontal */
+  -webkit-overflow-scrolling: touch; /* Untuk mendukung scroll pada perangkat mobile */
+}
+
+/* Styling untuk header dan cell tabel */
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: none;
+}
+
+.dashboard-table th {
+  background-color: #e0f4e9;
+  font-weight: bold;
+}
+
+/* Styling header */
+.dashboard-header {
+  color: #2d8f3b;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-top: 5rem;
+}
+
+/* Responsivitas untuk tabel */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-table {
+    display: block;  /* Menampilkan tabel dalam bentuk block untuk perangkat kecil */
+    width: 100%;
+    max-width: 100%; /* Menyesuaikan lebar tabel dengan kontainer */
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    white-space: nowrap; /* Menghindari pemotongan teks dalam tabel */
+  }
+
+  .dashboard-table th, .dashboard-table td {
+    padding: 10px 12px;  /* Mengurangi padding untuk ruang lebih */
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsivitas untuk perangkat dengan layar lebih kecil dari 480px */
+@media (max-width: 480px) {
+  .dashboard-table th, .dashboard-table td {
+    font-size: 0.85rem;
+    padding: 8px 10px;  /* Menyesuaikan padding pada perangkat sangat kecil */
+  }
+}
+
+/* Styling untuk status */
+.status {
+  color: #00f2ff;  /* Warna untuk status aktif */
+  font-weight: bold;
+}
+
+/* Styling untuk tombol di kolom Action */
+.action-button {
+  background-color: #2d8f3b;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #246f2d;
+}
+
+.location-button {
+  cursor: pointer;
+}
+
+.location-button:hover {
+  color: #246f2d;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding:  10px 0;
+}
+
+/* Indicator styles */
+.indicator {
+  padding: 5px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  width: 100%; 
+  max-width: 120px; 
+  margin: 0 auto; 
+}
+
+.indicator.red {
+  background-color: red;
+}
+
+.indicator.yellow {
+  background-color: yellow;
+}
+
+.indicator.green {
+  background-color: green;
+}

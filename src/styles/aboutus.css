@@ -1,0 +1,82 @@
+/* About Us section */
+.about-us {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f5faf5;
+}
+
+.about-us h2 {
+  color: #2d8f3b;
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.about-us p {
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 70rem;
+  margin: 0 auto;
+  word-wrap: break-word;
+  font-size: 1rem;
+  padding: 3rem 1rem;
+}
+
+/* Menambahkan properti untuk kontainer gambar */
+.about-us .about-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap; /* Menghindari gambar dibungkus ke baris berikutnya */
+  overflow-x: auto; /* Membuat gambar dapat digulir secara horizontal */
+  white-space: nowrap; /* Pastikan gambar tetap dalam satu baris */
+}
+
+.about-us img {
+  width: 200px; /* Ukuran gambar bisa disesuaikan */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0; /* Prevent the images from shrinking */
+  transition: width 0.3s ease; /* Tambahkan transisi untuk perubahan lebar gambar */
+}
+
+/* Responsivitas untuk layar mobile */
+@media (max-width: 768px) {
+  .about-us p {
+    font-size: 0.95rem;
+    padding: 2rem 1rem;
+  }
+
+  .about-us img {
+    width: 200px;  /* Menyesuaikan ukuran gambar */
+  }
+
+  .about-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-us .about-images {
+    gap: 0.5rem; /* Mengurangi jarak antar gambar */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us p {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-us .about-images {
+    justify-content: flex-start;
+  }
+
+  .about-us img {
+    width: 150px;  /* Menyesuaikan ukuran gambar lebih kecil */
+  }
+
+  .about-us h2 {
+    font-size: 1.5rem;
+  }
+}

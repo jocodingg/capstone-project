@@ -1,0 +1,92 @@
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 70rem; /* Membatasi lebar konten */
+  margin: 0 auto; /* Menjaga konten tetap terpusat */
+  border-radius: 12px; /* Menambahkan border radius untuk tampilan lebih halus */
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #2d8f3b;
+  font-weight: 700;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Menampilkan 4 kolom */
+  gap: 2rem; /* Spasi antar kolom */
+  padding-top: 2rem;
+}
+
+.feature-card {
+  background-color: #e0f4e9; /* Warna latar belakang kartu */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kartu */
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Efek hover untuk menonjolkan kartu */
+}
+
+.feature-card img {
+  width: 60px; /* Ukuran ikon */
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2d8f3b;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr); /* Mengubah menjadi 2 kolom pada tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-cards {
+    grid-template-columns: 1fr; /* Menjadi 1 kolom pada layar lebih kecil */
+  }
+
+  .features h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.card {
+  background-color: #eafeef;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #2d8f3b;
+}
+.card p {
+  color: #555;
+  font-size: 0.9rem;
+}

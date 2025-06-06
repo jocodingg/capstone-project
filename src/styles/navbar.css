@@ -1,0 +1,139 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #e0f4e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -ms-border-radius: 20px 20px 20px 20px;
+  -o-border-radius: 20px 20px 20px 20px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  margin-right: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #fff;
+  color: #2d8f3b;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+/* Hamburger to close effect */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+/* Navbar menu toggle for mobile */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1rem;
+  transform: translateY(0);
+}
+
+.nav-links.active a {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.nav-eddy {
+  color: #00B4D8;
+  font-weight: bold;
+}
+
+/* Responsivitas untuk layar mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 80px;  /* Sesuaikan jika diperlukan */
+    left: 0;
+    background-color: #e0f4e9;
+    border-radius: 8px;
+    transform: translateY(-100%);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(0); /* Efek muncul secara vertikal */
+  }
+}
+
+/* navbar.css */
+.nav-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  background-color: #2d8f3b;  /* Green background for active link */
+  color: #fff;  /* White text for active link */
+}
+
+

@@ -1,0 +1,38 @@
+/* src/styles/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Impor semua file CSS lainnya yang telah dibagi */
+@import "tailwindcss";
+@import './navbar.css';
+@import './hero.css';
+@import './dashboard.css';
+@import './footer.css';
+@import './aboutus.css';
+@import './futurecard.css';
+@import './faq.css';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5faf5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1200px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
