@@ -1,0 +1,79 @@
+.custom-bg {
+  display: flex;
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  color: #2E7D32;
+}
+
+.custom-card {
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.custom-startend {
+  margin-bottom: 1rem;
+}
+
+.custom-input {
+  background-color: #f7fdf9;
+  border: 1px solid #cde7d8;
+  transition: border 0.3s ease;
+  font-size: 16px;
+}
+
+.custom-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.custom-button {
+  background-color: #66bb6a;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #57a05a;
+}
+
+.pw {
+  margin-top: 1rem;
+}
+
+.input-startend {
+  padding: 0.25rem;
+}
+
+.custom-button-confirm {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.custom-button-confirm:hover {
+  background-color: #3e8e41;
+}
+
+.custom-progress {
+  color: #388e3c;
+  font-size: 14px;
+}
+

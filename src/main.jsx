@@ -5,6 +5,7 @@ import App from './App';
 import './styles/index.css';
 import LocationPage from './components/LocationPage';
 import DashboardPage from './components/DashboardPage';
+import DownloadPage from './components/DownloadPage';
 import 'leaflet/dist/leaflet.css';
 import 'animate.css';
 import AOS from 'aos';
@@ -16,11 +17,12 @@ AOS.init({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>  {/* Membungkus seluruh aplikasi dengan Router */}
+    <Router>
       <Routes>
         <Route path="/" element={<App />} />               
         <Route path="/lokasi" element={<LocationPage />} /> 
         <Route path="/dashboard" element={<DashboardPage />} /> 
+        <Route path="/download" element={<DownloadPage />} /> 
       </Routes>
     </Router>
   </React.StrictMode>
