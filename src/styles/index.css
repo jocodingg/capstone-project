@@ -1,7 +1,5 @@
-/* src/styles/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Impor semua file CSS lainnya yang telah dibagi */
 @import "tailwindcss";
 @import './navbar.css';
 @import './hero.css';

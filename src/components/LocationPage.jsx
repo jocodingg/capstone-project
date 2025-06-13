@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
 
 const LocationPage = () => {
   const navigate = useNavigate();
-  const position = [-2.6, 115.0]; // Lokasi di Kalimantan Selatan
+  const position = [-2.6, 115.0];
 
   return (
     <div className="location-container">

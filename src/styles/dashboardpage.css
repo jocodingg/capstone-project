@@ -1,9 +1,9 @@
-/* styles/dashboard.css */
 .dashboardpage-container {
   display: flex;
   min-height: 100vh;
   background-color: #eef6f0;
   font-family: 'Inter', sans-serif;
+  flex-direction: row;
 }
 
 .dashboardpage-sidebar {
@@ -32,7 +32,6 @@
   width: 60px;
 }
 
-/* Tambahan: untuk NavLink */
 .sidebar-link {
   display: block;
   padding: 0.5rem;
@@ -67,25 +66,29 @@
   display: inline-block;
   padding: 0.25rem 1rem;
   border-radius: 8px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   color: #2E7D32;
 }
 
 .dashboardpage-charts {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .chart-box {
-  background: #fff;
-  border-radius: 12px;
+  flex: 1 1 45%;
+  min-width: 300px;
+  max-width: 600px;
+  background: white;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  flex: 1;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .chart-title {
@@ -103,15 +106,18 @@
 
 .dashboardpage-gauges {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .gauge-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
+  min-width: 100px;
 }
 
 .gauge-circle {
@@ -129,6 +135,7 @@
 
 .gauge-label {
   font-size: 0.875rem;
+  text-align: center;
 }
 
 .gauge-high {
@@ -146,6 +153,10 @@
   color: white;
 }
 
+.dashboardpage-table {
+  overflow-x: auto;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -153,6 +164,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 600px;
 }
 
 .data-table th,
@@ -169,4 +181,33 @@
 .table-title {
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .dashboardpage-container {
+    flex-direction: column;
+  }
+
+  .dashboardpage-sidebar {
+    display: none !important;
+  }
+
+  .dashboardpage-charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .gauge-wrapper {
+    width: 30%;
+  }
+
+  .dashboardpage-main {
+    padding: 1rem;
+  }
 }

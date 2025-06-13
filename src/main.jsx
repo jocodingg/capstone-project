@@ -10,6 +10,8 @@ import 'leaflet/dist/leaflet.css';
 import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { registerSW } from 'virtual:pwa-register';
+
 AOS.init({
   once: false,
   duration: 800,
@@ -27,3 +29,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Router>
   </React.StrictMode>
 );
+
+const updateSW = registerSW({
+  onNeedRefresh() {},
+  onOfflineReady() {
+    console.log('App siap digunakan secara offline!');
+  },
+});

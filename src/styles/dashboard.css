@@ -8,15 +8,15 @@
 
 /* Styling untuk tabel */
 .dashboard-table {
-  width: 100%; /* Memastikan tabel mengisi 100% lebar kontainer */
-  border-collapse: collapse; /* Menghilangkan border antar sel tabel */
+  width: 100%; 
+  border-collapse: collapse; 
   margin-top: 2rem;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk tabel */
-  table-layout: auto; /* Mengatur lebar kolom tabel agar otomatis menyesuaikan */
-  overflow-x: auto; /* Mengaktifkan scroll horizontal */
-  -webkit-overflow-scrolling: touch; /* Untuk mendukung scroll pada perangkat mobile */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  table-layout: auto; 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 /* Styling untuk header dan cell tabel */
@@ -41,37 +41,75 @@
   margin-top: 5rem;
 }
 
-/* Responsivitas untuk tabel */
-@media (max-width: 768px) {
-  .dashboard-container {
-    padding: 15px;
-  }
-
+@media (max-width: 600px) {
   .dashboard-table {
-    display: block;  /* Menampilkan tabel dalam bentuk block untuk perangkat kecil */
+    display: block;
     width: 100%;
-    max-width: 100%; /* Menyesuaikan lebar tabel dengan kontainer */
-    overflow-x: auto; /* Mengaktifkan scroll horizontal */
-    white-space: nowrap; /* Menghindari pemotongan teks dalam tabel */
+    background: transparent;
+    box-shadow: none;
   }
 
-  .dashboard-table th, .dashboard-table td {
-    padding: 10px 12px;  /* Mengurangi padding untuk ruang lebih */
-    font-size: 0.9rem;
+  .dashboard-table thead {
+    display: none;
+  }
+
+  .mobile-dash {
+    display: none !important;
+  }
+
+  .dashboard-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashboard-table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboard-table tr td {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+    padding: 1px;
+  }
+
+  .dashboard-header {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .indicator {
+    font-size: 10px;
+    padding: 5px 10px;
+    max-width: unset;
+  }
+
+  .action-button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .location-button {
+    font-size: 13px;
+  }
+
+  .space-between-tables {
+    margin: 20px 0;
   }
 }
 
-/* Responsivitas untuk perangkat dengan layar lebih kecil dari 480px */
-@media (max-width: 480px) {
-  .dashboard-table th, .dashboard-table td {
-    font-size: 0.85rem;
-    padding: 8px 10px;  /* Menyesuaikan padding pada perangkat sangat kecil */
-  }
-}
 
-/* Styling untuk status */
 .status {
-  color: #00f2ff;  /* Warna untuk status aktif */
+  color: #00f2ff; 
   font-weight: bold;
 }
 
@@ -128,4 +166,20 @@
 
 .indicator.green {
   background-color: green;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 4px solid #c8e6c9;
+  border-top: 4px solid #4caf50;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

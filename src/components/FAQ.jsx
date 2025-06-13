@@ -1,4 +1,3 @@
-// src/pages/FAQ.jsx
 import React from 'react';
 import FAQItem from '../components/FAQItem';
 import '../styles/faq.css';
